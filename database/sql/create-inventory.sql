@@ -1,7 +1,7 @@
-use sewing_projects;
+-- use sewing_projects;
 
 create table if not exists inventory (
-  item_id int auto_increment primary key,
+  inventory_id int auto_increment primary key,
   title varchar(256),
   category varchar(128),
   subcategory varchar(128),
@@ -14,7 +14,7 @@ create table if not exists inventory (
 );
 
 create table if not exists tool (
-  tools_id int auto_increment primary key,
+  tool_id int auto_increment primary key,
   title varchar(256),
   category varchar(128),
   subcategory varchar(128),

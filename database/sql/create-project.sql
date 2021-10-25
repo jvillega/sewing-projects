@@ -1,4 +1,4 @@
-use sewing_projects;
+-- use sewing_projects;
 
 create table if not exists projects (
   id int auto_increment primary key,
@@ -23,7 +23,7 @@ create table if not exists instruction_images (
   type varchar(8),
   filename varchar(256),
   file_path varchar(256),
-  foreign key (instruction) references instructions (instruction_id) on delete cascade
+  foreign key (instruction) references instructions (instruction_id) ON DELETE CASCADE
 );
 
 create table if not exists materials (
@@ -31,11 +31,13 @@ create table if not exists materials (
   item int,
   quantity int,
   cost float,
-  foreign key (project) references projects (id) on delete cascade
+  FOREIGN KEY (item) REFERENCES inventory (inventory_id) ON DELETE CASCADE,
+  FOREIGN KEY (project) REFERENCES projects (id) ON DELETE CASCADE
 );
 
 create table if not exists tools (
   project int,
   item int,
+  foreign key (item) references tool (tool_id) on delete cascade,
   foreign key (project) references projects (id) on delete cascade
 );
