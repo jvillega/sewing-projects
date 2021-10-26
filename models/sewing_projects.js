@@ -1,6 +1,6 @@
 exports.config = {
-  user: 'DB_USER',
-  password: 'DB_USER_PASSWORD',
-  host: 'DB_HOST',
-  database: 'DB'
+  user: 'seamstress',
+  password: 's0cc3r$gaMe4',
+  host: '192.168.0.17',
+  database: 'sewing_projects'
 };
